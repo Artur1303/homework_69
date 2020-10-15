@@ -1,0 +1,23 @@
+{% load staticfiles %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<input type="number" id='A' placeholder="A">
+    <input type="number" id='B' placeholder="B">
+    <p>
+        <button id="add">Сложение</button>
+        <button id="subtract">Вычетание</button>
+        <button id="multiply">Умножение</button>
+        <button id="divide">Деление</button>
+    </p>
+    <textarea rows="5" cols="25" id="text"></textarea>
+<script src="{% static 'js/main.js' %}"></script>
+</body>
+</html>

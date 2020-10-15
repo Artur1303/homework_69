@@ -17,6 +17,7 @@ from django.contrib import admin
 from django.urls import path
 
 from api_v1.views import json_echo_view, get_token_view, AddView
+from webapp_ver2.views import IndexView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -26,8 +27,7 @@ urlpatterns = [
     path('subtract/', AddView.as_view(), name='/subtract'),
     path('multiply/', AddView.as_view(), name='/multiply'),
     path('divide/', AddView.as_view(), name='/divide'),
-
-
+    path('index/', IndexView.as_view(), name='index')
 
 
 ]
