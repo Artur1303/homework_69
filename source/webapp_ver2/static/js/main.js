@@ -41,9 +41,11 @@ for (let button of buttons) {
         data = {"A":document.getElementById('A').value,"B":document.getElementById('B').value})
             console.log(answer)
             document.getElementById('text').innerText = answer.result
+            document.getElementById("text").style['color'] = 'green'
         } catch (e) {
             let err = await e.response.json()
-            document.getElementById('text').value = err.error
+            document.getElementById('text').innerText = err.error
+            document.getElementById("text").style['color'] = 'red'
         }
     })
 }
